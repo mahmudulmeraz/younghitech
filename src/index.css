@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #06233A;
+    --color-navy-dark: #031827;
+    --color-navy-light: #082B45;
+    --color-steel: #2B5D78;
+    --color-light-bg: #F2F8FB;
+    --color-soft-blue: #E5F0F5;
+    --color-accent: #D94A4A;
+    --color-accent-hover: #E84D4D;
+    --color-text-primary: #10212E;
+    --color-text-secondary: #5F7180;
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-light-bg);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom 60fps Right-to-Left Infinite Continuous Marquee */
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-rtl {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Subtle grid pattern for technical background */
+.bg-tech-grid {
+  background-image: radial-gradient(rgba(43, 93, 120, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-tech-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #031827;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B5D78;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D94A4A;
+}
+

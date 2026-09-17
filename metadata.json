@@ -1,0 +1,6 @@
+{
+  "name": "Young Hi Tech Technical Wear Ltd.",
+  "description": "Global B2B technical wear manufacturer specializing in skiwear, ride gear, minus temp down jackets, rainwear, and industrial heavy jackets using German and Chinese machinery with imported raw materials.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
